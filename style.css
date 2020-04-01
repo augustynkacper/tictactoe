@@ -1,0 +1,112 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size:60px;
+}
+
+/*CHOOSE_FIGHTER*/
+.chooseFighter>label{
+    font-size:30px;
+    font-weight: 900;
+}
+.chooseFighter>input[type="button"]{
+    padding:10px 25px;
+    font-size:20px;
+    font-weight:900;
+    border:2px solid black;
+    background: none;
+    border-radius: 4px;
+    margin:25px;
+    transition: 0.2s;
+    outline:none;
+}
+.chooseFighter{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    transition:0.2s;
+}
+
+.chooseFighter>input[type="button"]:hover{
+    background: black;
+    color:white;
+}
+.fadeOut{
+    opacity:0;
+}
+.disappear{
+    display:none;
+}
+
+
+/*FIELDS*/
+.fields{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width:300px;
+    height:300px;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    opacity:0;
+    transition:0.2s;
+    z-index: -1;
+}
+.fields>div{
+    width:100px;
+    height:100px; 
+    transition:0.2s;
+}
+.fields>div:nth-child(1), 
+.fields>div:nth-child(2), 
+.fields>div:nth-child(3), 
+.fields>div:nth-child(4), 
+.fields>div:nth-child(5), 
+.fields>div:nth-child(6) {
+    border-bottom:1px black solid;
+}
+.fields>div:nth-child(1), 
+.fields>div:nth-child(2), 
+.fields>div:nth-child(4), 
+.fields>div:nth-child(5), 
+.fields>div:nth-child(7), 
+.fields>div:nth-child(8) {
+    border-right:1px black solid;
+}
+
+.fields>div:hover{
+    background-color: rgb(212, 211, 211);
+}
+
+.fadeIn{
+    opacity:1;
+}
+
+.circleBck{
+    background-image: url('circle.png');
+    background-size: cover;
+}
+.crossBck{
+    background-image: url('cross.png');
+    background-size: cover;
+}
+
+/* Result*/
+.result{
+    position: absolute;
+    top:80%;
+    left:50%;
+    transform: translate(-50%,-80%);
+    color:green;
+}
